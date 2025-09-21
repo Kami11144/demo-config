@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Конфигуратор шкафа</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Конфигуратор шкафа</h1>
+    <div class="configurator">
+
+      <!-- превью -->
+      <div class="preview">
+      <img id="wardrobePreview" src="img/wardrobe.png" alt="Шкаф">
+      </div>
+
+
+
+      <!-- параметры -->
+      <div class="options">
+
+        <!-- размеры (в ряд) -->
+        <div class="dimension-block">
+          <div class="custom-select" data-name="width">
+            <div class="selected">Выберите ширину</div>
+            <div class="custom-options">
+              <div class="param-title">Ширина</div>
+              <div data-value="1000" data-price="0">1000 мм</div>
+              <div data-value="1200" data-price="2000">1200 мм (+2000 ₽)</div>
+              <div data-value="1500" data-price="4000">1500 мм (+4000 ₽)</div>
+            </div>
+          </div>
+
+          <div class="custom-select" data-name="height">
+            <div class="selected">Выберите высоту</div>
+            <div class="custom-options">
+              <div class="param-title">Высота</div>
+              <div data-value="2000" data-price="0">2000 мм</div>
+              <div data-value="2200" data-price="1500">2200 мм (+1500 ₽)</div>
+            </div>
+          </div>
+
+          <div class="custom-select" data-name="depth">
+            <div class="selected">Выберите глубину</div>
+            <div class="custom-options">
+              <div class="param-title">Глубина</div>
+              <div data-value="500" data-price="0">500 мм</div>
+              <div data-value="600" data-price="1000">600 мм (+1000 ₽)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- остальное -->
+        <div class="custom-select" data-name="doorType">
+          <div class="selected">Тип дверей</div>
+          <div class="custom-options">
+            <div class="param-title">Тип дверей</div>
+            <div data-value="swing" data-price="0">Распашные</div>
+            <div data-value="sliding" data-price="2500">Раздвижные (+2500 ₽)</div>
+          </div>
+        </div>
+
+        <div class="custom-select" data-name="facadeColor">
+          <div class="selected">Цвет фасада</div>
+          <div class="custom-options">
+            <div class="param-title">Цвет фасада</div>
+            <div data-value="white" data-price="0">Белый</div>
+            <div data-value="oak" data-price="500">Дуб (+500 ₽)</div>
+            <div data-value="venge" data-price="800">Венге (+800 ₽)</div>
+            <div data-value="gray" data-price="300">Серый (+300 ₽)</div>
+          </div>
+        </div>
+
+        <div class="custom-select" data-name="bodyColor">
+          <div class="selected">Цвет корпуса</div>
+          <div class="custom-options">
+            <div class="param-title">Цвет корпуса</div>
+            <div data-value="white" data-price="0">Белый</div>
+            <div data-value="gray" data-price="0">Серый</div>
+            <div data-value="black" data-price="0">Чёрный</div>
+          </div>
+        </div>
+
+        <div class="custom-select" data-name="material">
+          <div class="selected">Материал корпуса</div>
+          <div class="custom-options">
+            <div class="param-title">Материал корпуса</div>
+            <div data-value="ldsp" data-price="0">ЛДСП</div>
+            <div data-value="mdf" data-price="3000">МДФ (+3000 ₽)</div>
+            <div data-value="wood" data-price="7000">Дерево (+7000 ₽)</div>
+          </div>
+        </div>
+
+        <div class="custom-select" data-name="handles">
+          <div class="selected">Тип ручек</div>
+          <div class="custom-options">
+            <div class="param-title">Тип ручек</div>
+            <div data-value="classic" data-price="0">Классические</div>
+            <div data-value="built-in" data-price="1500">Встроенные (+1500 ₽)</div>
+            <div data-value="metal" data-price="2500">Металлические (+2500 ₽)</div>
+          </div>
+        </div>
+
+        <div class="custom-select" data-name="lighting">
+          <div class="selected">Подсветка</div>
+          <div class="custom-options">
+            <div class="param-title">Подсветка внутри</div>
+            <div data-value="none" data-price="0">Нет</div>
+            <div data-value="led" data-price="2000">LED (+2000 ₽)</div>
+          </div>
+        </div>
+
+        <div class="custom-select" data-name="drawers">
+          <div class="selected">Ящики</div>
+          <div class="custom-options">
+            <div class="param-title">Количество ящиков</div>
+            <div data-value="0" data-price="0">0</div>
+            <div data-value="1" data-price="1500">1</div>
+            <div data-value="2" data-price="3000">2</div>
+            <div data-value="3" data-price="4500">3</div>
+          </div>
+        </div>
+
+        <div class="checkbox-container" id="antresol-wrapper" data-name="antresol">
+          <label for="antresol">Антресоль (+2500 ₽)</label>
+          <input id="antresol" type="checkbox" data-price="2500">
+        </div>
+
+        <div class="summary">
+          <h2>Цена: <span id="price">0</span> ₽</h2>
+          <button id="exportBtn">В корзину</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
